@@ -2,7 +2,7 @@
 
 const AdminTopBar = () => {
   return (
-    <div>
+    <div className="h-16 w-svw bg-">
       
     </div>
   )
