@@ -5,6 +5,7 @@ import AdminOrders from "./pages/admin/AdminOrders"
 import AdminUsers from "./pages/admin/AdminUsers"
 import AdminProducts from "./pages/admin/AdminProducts"
 import UserProduct from "./pages/user/UserProduct"
+import AdminLayout from "./layouts/AdminLayout"
 
 
 const App = () => {
@@ -13,10 +14,15 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Login/>}/>
                 <Route path="/register" element={<Register />}/>
+                <Route element={<AdminLayout />}>
+
                 <Route path="/admin/products" element={<AdminProducts/>}/>
                 <Route path="/admin/users" element={<AdminUsers/>}/>
                 <Route path="/admin/orders" element={<AdminOrders/>}/>
+                </Route>
+
                 <Route path="/users/products" element={<UserProduct/>}/>
+                
             </Routes>
         </div>
     )
